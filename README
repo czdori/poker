@@ -1,0 +1,16 @@
+POKER
+
+--- disclaimer: not all of the code is written by me! some of it was part of the lesson, but about 80-90% is my own work. ---
+
+This is a program representing a game of poker. 
+
+First, it deals out the cards according to the number of players (numhands) and the number of cards for each (n). Cards are represented with a 2-character string: their value (2-9, T for 10, JQKA) and their color (S,H,D,C). 
+
+Next, there's card_ranks which, obviously, ranks the cards in a hand, returning an ordered list of their values, regardless of color. The only tricky thing is that if we have cards like 2, 3, 4, 5 and an ace, it counts as a straight because here the A is not valued the highest, but 1. We took care of this in the return statement.
+
+The hand_rank function has some helper functions: two of them decide if the hand is a straight (the values are consecutive of each other) or a flush (they are the same suit), then there's two_pair, and kind, which helps in deciding if the hand's rank is n-of-a-kind. There's an alternative for this function, a little bit more elegant.
+
+The best_wild_hand and the replacement functions allow us to play with jokers in the deck! They find the best possible replacement for us.
+
+Now it's time to actually play the game! The poker function announces the winning hands (and the allmax function makes it possible that identical hands are all returned).
+
